@@ -20,4 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 // Prefix: api/tasks
-Route::get('tasks', [TaskController::class, 'index']);
+Route::get('tasks', [TaskController::class, 'index'])->middleware('token');
+Route::post('tasks', [TaskController::class, 'create']);
+
