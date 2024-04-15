@@ -1,6 +1,6 @@
 ## What is this?
 
-A basic task manager app with Laravel 10
+A basic task manager API, with Laravel 10
 
 ## Commands
 
