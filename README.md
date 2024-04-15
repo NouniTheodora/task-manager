@@ -18,4 +18,8 @@ Generate data for a model:
 
 `Task::factory(50)->create()`
 
+## Plugins
+
+Laravel Query Builder: https://github.com/spatie/laravel-query-builder
+
 
