@@ -7,6 +7,9 @@ A basic task manager app with Laravel 10
 Start the service:
 `php artisan serve`
 
+Fresh migration:
+`php artisan migrate:fresh`
+
 Show the routes list:
 `php artisan route:list`
 
