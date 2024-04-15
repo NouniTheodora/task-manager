@@ -23,6 +23,8 @@ Generate data for a model:
 
 ## Plugins
 
-Laravel Query Builder: https://github.com/spatie/laravel-query-builder
+- Laravel Query Builder (Sort, filtering & pagination): https://github.com/spatie/laravel-query-builder
+- Laravel Sanctrum (API Authentication): https://laravel.com/docs/10.x/sanctum
+
 
 
