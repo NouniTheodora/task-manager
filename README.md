@@ -10,4 +10,12 @@ Start the service:
 Show the routes list:
 `php artisan route:list`
 
+Create a factory for a model:
+`php artisan make:factory TaskFactory --model=Task`
+
+Generate data for a model:
+`php artisan tinker`
+
+`Task::factory(50)->create()`
+
 
