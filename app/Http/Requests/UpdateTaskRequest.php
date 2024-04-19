@@ -3,6 +3,8 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rule;
 
 class UpdateTaskRequest extends FormRequest
 {
@@ -22,8 +24,15 @@ class UpdateTaskRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => 'sometimes|required|max:255',
-            'is_done' => 'sometimes|boolean'
+            'title'       => 'sometimes|required|max:255',
+            'is_done'     => 'sometimes|boolean',
+            'project_id'  =>  [
+                'nullable',
+                // Each user can only assign a project_id that he owns, to a task -> he is the creator
+                Rule::exists('projects', 'id')->where(function ($query) {
+                    $query->where('creator_id', Auth::id());
+                })
+            ]
         ];
     }
 }

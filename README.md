@@ -21,6 +21,8 @@ Generate data for a model:
 
 `Task::factory(50)->create()`
 
+`Task::factory()->for($u, 'creator')->create()`: Create a task for the user $u, using the creator relation
+
 Generate a model, a controller, a migration & a factory
 `php artisan make:model -cmf`
 

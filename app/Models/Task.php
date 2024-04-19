@@ -16,7 +16,8 @@ class Task extends Model
     // The required properties that must be sent
     protected $fillable = [
         'title',
-        'is_done'
+        'is_done',
+        'project_id'
     ];
 
     protected $casts = [
