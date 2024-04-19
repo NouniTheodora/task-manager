@@ -21,6 +21,9 @@ Generate data for a model:
 
 `Task::factory(50)->create()`
 
+Generate a model, a controller, a migration & a factory
+`php artisan make:model -cmf`
+
 ## Plugins
 
 - Laravel Query Builder (Sort, filtering & pagination): https://github.com/spatie/laravel-query-builder
