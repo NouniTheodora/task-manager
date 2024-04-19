@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\TaskController;
 use App\Http\Resources\TaskResource;
 use App\Models\Task;
@@ -27,7 +28,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::middleware('auth:sanctum')->group(function() {
-    // Prefix: api/tasks
+    // api/tasks
     Route::apiResource('tasks', TaskController::class);
+    // api/projects
+    Route::apiResource('projects', ProjectController::class);
 });
 
