@@ -8,6 +8,7 @@ use App\Http\Resources\ProjectCollection;
 use App\Http\Resources\ProjectResource;
 use App\Models\Project;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Spatie\QueryBuilder\QueryBuilder;
 
@@ -43,5 +44,12 @@ class ProjectController extends Controller
     public function show(Request $request, Project $project): Project
     {
         return (new ProjectResource($project))->load('tasks');
+    }
+
+    public function destroy(Request $request, Project $project): Response
+    {
+        $project->delete();
+
+        return response()->noContent();
     }
 }
