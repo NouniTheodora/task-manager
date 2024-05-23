@@ -26,6 +26,9 @@ Generate data for a model:
 Generate a model, a controller, a migration & a factory
 `php artisan make:model -cmf`
 
+Generate a model with a PIVOT relation (many to many):
+`php artisan make:model --pivot`
+
 ## Plugins
 
 - Laravel Query Builder (Sort, filtering & pagination): https://github.com/spatie/laravel-query-builder

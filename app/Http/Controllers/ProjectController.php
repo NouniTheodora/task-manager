@@ -43,7 +43,9 @@ class ProjectController extends Controller
 
     public function show(Request $request, Project $project): Project
     {
-        return (new ProjectResource($project))->load('tasks');
+        return (new ProjectResource($project))
+            ->load('tasks')
+            ->load('members');
     }
 
     public function destroy(Request $request, Project $project): Response
